@@ -3,7 +3,7 @@ $(document).ready(function(e) {
     
 	//watchID se refiere a la aceleracion 'actual'//
 	var watchID=null;
-	document.addEventListener("deviceready", Dispositivo_Listo, false);
+	document.addEventListener("deviceready",Dispositivo_Listo,false);
 	//Cuando esta listo el dispositivo//
 	function Dispositivo_Listo() {
 		Comienza();
@@ -14,7 +14,7 @@ $(document).ready(function(e) {
 		//Actualiza la aceleracion cada 3 segundos//
 		var opciones={frequency:2000};
 		watchID=navigator.accelerometer.watchAcceleration(Correcto,Error,opciones);
-		navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
+		navigator.geolocation.getCurrentPosition(Localiza,ErrorLocalizacion);
 	}
 	
 	//Detiene la 'observacion' de la aceleracion//
